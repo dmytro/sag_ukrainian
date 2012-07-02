@@ -1,0 +1,143 @@
+%--------------------------------------------------------------------
+% frontmatter.tex -- all the stuff before the table of contents
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+% The front matter has no page numbers
+
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\title{Linux System Administrators' Guide 0.6}
+\author{Lars Wirzenius}
+\date{}
+
+%--------------------------------------------------------------------
+% The half title
+
+ {}
+
+\vspace{2in}
+
+\makeatletter
+\noindent \large \rm \@title
+\makeatother
+\newpage
+
+%--------------------------------------------------------------------
+% Title page
+
+ {}
+
+\vspace{2in}
+
+\makeatletter
+\noindent \huge \rm \@title \\
+\vspace{1in} \\
+\large \rm \@author
+\makeatother
+
+\vfill
+
+ {
+\includegraphics{linux-logo.ps}
+ { {{\normalsize The Linux Documentation Project}} \vspace{1em}}
+}
+
+
+%--------------------------------------------------------------------
+% Copyright page
+
+\clearpage
+ {}
+
+\vfill
+
+\noindent
+This is version 0.6 of the Linux System Administrators' Guide. \\
+Published November 15, 1997.
+
+\vspace{5ex}
+
+\noindent
+The \LaTeX\ source code and other machine readable formats
+can be found on the Internet via anonymous ftp on
+\texttt{sunsite.unc.edu}, in the directory \texttt{/pub/Linux/docs/LDP}.
+Also available are at least Postscript and \TeX\ .DVI formats.
+The official home page for the book is
+\texttt{http://www.iki.fi/liw/linux/sag/}. The current version can always
+be found at that location.
+
+
+\vspace{5ex}
+
+\noindent
+Copyright \copyright\ 1993--1997 Lars Wirzenius.
+
+\vspace{5ex}
+
+\noindent
+Trademarks are owned by their owners.
+
+\vspace{5ex}
+
+{\small
+\noindent
+Permission is granted to make and distribute verbatim copies of
+this manual provided the copyright notice and this permission notice
+are preserved on all copies.
+
+\noindent
+Permission is granted to process the document source code
+through \TeX\ or other formatters and print the
+results, and distribute the printed document,
+provided the printed document carries copying permission
+notice identical to this one, including the references to where
+the source code can be found and the official home page.
+
+\noindent
+Permission is granted to copy and distribute modified versions of this
+manual under the conditions for verbatim copying, provided that the entire
+resulting derived work is distributed under the terms of a permission
+notice identical to this one. 
+
+\noindent
+Permission is granted to copy and distribute translations of this manual
+into another language, under the above conditions for modified versions.
+
+% \noindent
+% The appendices not written by Lars Wirzenius are copyrighted by their
+% authors, and can be copied and distributed only in unmodified form.
+
+\noindent
+The author would appreciate a notification of modifications, translations,
+and printed versions.  Thank you.
+
+}
+\clearpage
+
+%--------------------------------------------------------------------
+% Dedication
+
+ {}
+
+\vspace{2in}
+
+\large 
+\begin{center}
+This page is dedicated to a future dedication.
+
+\vspace{4cm}
+
+\small{In the mean time\dots I'd like someone who knows him let Terry
+Pratchett know that his way of using footnotes is rather inspiring.}
+
+\end{center}
+\newpage
+
+
+%--------------------------------------------------------------------
+% Reset page style
+
+\thispagestyle{headings}
+\pagestyle{headings}

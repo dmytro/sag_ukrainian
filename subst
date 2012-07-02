@@ -1,0 +1,12 @@
+#!/bin/sh
+
+file="$1"
+shift
+
+while [ "$2" != "" ]
+do
+#	echo "substing $1 to $2"
+	sed "s/$1/$2/g" "$file" > "$file.bak"
+	mv "$file.bak" "$file"
+	shift 2
+done

@@ -1,0 +1,14 @@
+Revisions information
+--------------------
+
+v. 1.0 first public release. February 16, 1999
+v. 1.0.1 
+	Feb 20, 1999
+	Fixed bugs in disks section prevented from translating it into HTML
+	Added all translations given with \intnote{} into dictionary
+	First release of LaTeX code
+	Some other small cleanup
+
+v.1.2
+       Cleaned up all code conversion of LaTeX format. Conversion to pdf works. 
+	Виправив вс╕ "загрузки" на "завантаження". ╤нш╕ косметичн╕ правки.

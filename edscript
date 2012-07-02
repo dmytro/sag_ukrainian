@@ -1,0 +1,9 @@
+g/charset=iso-8859-1/d
+g/\[\#!ext2-defrag!\#\]/s/ext2-defrag/<a href="node119.html#ext2-defrag">          Linux filesystem defragmenter<\/a>/g
+g/\[\#!bootdisk-howto!\#\]/s/bootdisk-howto/ <a href="node119.html#bootdisk-howto">       Bootdisk HOWTO<\/a>/g
+g/\[\#!network-admin-guide!\#\]/s/network-admin-guide/ <a href="node119.html#network-admin-guide">  Linux Network Administrators\' Guide<\/a>/g
+g/\[\#!fsstnd-1.2!\#\]/s/fsstnd-1.2/ <a href="node119.html#fsstnd-1.2">           Linux Filesystem Structure---Release 1.2<\/a>/g
+g/\[\#!device-list!\#\]/s/device-list/ <a href="node119.html#device-list">          Linux Device List<\/a>/g
+w
+q
+

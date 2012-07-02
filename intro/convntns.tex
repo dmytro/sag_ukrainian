@@ -1,0 +1,89 @@
+% convntns.tex
+% Copyright 1992, 1993 Michael K. Johnson, to be distributed freely.
+% Use as directed ;-)
+%
+% For \documentstyle, use the linuxdoc option.  If you want one-sided
+% printing, choose report, and if you want two-sided printer, choose
+% book.
+%
+% Style options:
+% linuxdoc is required (not an option :-), and should be the last
+%   option specified.
+% boxedminipage is encouraged.
+% fullpage is illegal
+% twoside is illegal.
+%
+% Note: marginal notes
+% Using marginal notes is illegal.
+%
+% Read linuxdoc.sty for an explanation of what macros are made
+%  available there.  Really, do read it.  I made an effort to comment
+%  it well.
+
+\section*{Типограф╕чн╕ домовленост╕}
+
+\begin{description}
+\item [{\bf Жирний текст}] Використову╓ться для позначення {\bf нових
+концепц╕й}, {\bf ПОПЕРЕДЖЕНЬ}, та {\bf ключових сл╕в} в мов╕.
+
+\item [{\em кусив}] Використову╓ться для {\em посилення} в текст╕, та
+╕нколи в лапках та на початку нового розд╕лу.
+
+% Italics should be used sparingly, and in general, putting entire
+% sentences in italics makes them difficult to read.  Use /bf if it is
+% absolutely necessary to emphasize a whole sentence or paragraph.
+% Think twice before doing this.
+
+
+\item [{\sl нахилений текст}] Використову╓ться для позначення {\bf
+мета-зм╕нних} в текст╕, особливо при написанн╕ командного
+рядка. Наприклад, \begin{quote}{\tt ls -l} {\sl foo}\end{quote} де
+{\sl foo} буде означати назву файла для команди, таких як {\tt /bin/cp}.
+
+\item [{\tt Шрифт типу друкарсько╖ машинки}] Використову╓ться щоб
+показати вза╓мод╕ю користувача з комп'ютером (те, що в╕дбува╓ться на
+екран╕) як, наприклад в \begin{quote}\begin{verbatim}
+$ ls -l /bin/cp
+-rwxr-xr-x  1 root    wheel    12104 Sep 25 15:53 /bin/cp
+\end{verbatim}\end{quote}
+% I have provided a "<screen"> environment.  This sets things up
+%  as \small\begin{quote} at the beginning and \end{quote}\normalsize
+%  at the end.  It is useful for keeping your screens looking the
+%  same.  You have the choice, depending on the circumstances, to use
+%  \tt as your font, or to use a verbatim environment, or some
+%  combination of the two, to typeset your screen.
+% An \st font is also available, and is \small\tt.  I generally use
+%  verbatim in these situations instead.
+
+Також використову╓ться в зразках програмного коду, будь то програма на
+С╕, скрипт в мов╕ програмно╖ оболонки (shell script) чи ще що небудь,
+та для того, щоб показувати фрагменти загальних файл╕в, таких як,
+наприклад, файли конф╕гурац╕╖. Коли це необдх╕дно для ч╕ткост╕ викладу,
+ц╕ зразки та рисунки будуть заключатися в рамки.
+% The verbatim environment can be used for this.  Also, note that verb*
+% and verbatim* show spaces as little cup characters.
+
+\item [{\tt Клав╕ша}] Вказу╓, яку клав╕шу треба натиснути. Ви часто
+будете зустр╕чати ╖╖ в так╕й форм╕:
+\begin{quote}Press {\tt Return}\ to continue.\end{quote}
+% note that this is in a san-serif font...
+
+%% \item [\hfill$\Diamond$] A diamond in the margin, like a
+%% black diamond on a ski hill, marks "<danger"> or "<caution.">  Read
+%% paragraphs marked this way carefully.
+
+% In normal text, you will use this like this:
+%  \blackdiamond This is the beginning of a paragraph that you want
+%  flagged by a diamond.
+% This will come out like this:
+%   D     This is the beginning of a
+%      paragraph that you want flag-
+%      ged by a diamond.
+% Or like this, if the paragraph is not indented:
+%   D  This is  the  beginning  of a
+%      paragraph that you want flag-
+%      ged by a diamond.
+% where "<D"> represents a diamond-shaped character.  Notice the
+% alignment...
+
+\end{description}

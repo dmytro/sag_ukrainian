@@ -1,0 +1,42 @@
+%--------------------------------------------------------------------
+\chapter{Вим╕рювання д╕рок} \label{chap:measure-holes}
+%--------------------------------------------------------------------
+
+Цей додаток м╕стить ц╕каву частину програми, яка використову╓ться для
+вим╕рювання потенц╕йних д╕рок в файлових системах. Вих╕дний текст
+книжки ма╓ повний текст програми.
+(\texttt{sag/measure-holes/measure-holes.c}).
+
+\begin{quote}
+{\small
+\begin{verbatim}
+int process(FILE *f, char *filename) {
+        static char *buf = NULL;
+        static long prev_block_size = -1;
+        long zeroes;
+        char *p;
+
+        if (buf == NULL || prev_block_size != block_size) {
+                free(buf);
+                buf = xmalloc(block_size + 1);
+                buf[block_size] = 1;
+                prev_block_size = block_size;
+        }
+        zeroes = 0;
+        while (fread(buf, block_size, 1, f) == 1) {
+                for (p = buf; *p == '\0'; )
+                        ++p;
+                if (p == buf+block_size)
+                        zeroes += block_size;
+        }
+        if (zeroes > 0)
+                printf("%ld %s\n", zeroes, filename);
+        if (ferror(f)) {
+                errormsg(0, -1, "read failed for `%s'", filename);
+                return -1;
+        }
+        return 0;
+}
+\end{verbatim}
+}
+\end{quote}

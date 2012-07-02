@@ -1,0 +1,70 @@
+#!/bin/sh
+
+#if [ "$1" = "-n" ]
+#then
+#	echo "Not deleting old HTML directory."
+#else
+#	rm -rf HTML
+#fi
+#
+#test -d HTML || mkdir HTML
+#cp -a [^A-Z]* HTML/.
+#cd HTML
+#find . -type f -name '*.tex' \
+#	-exec ./subst '{}' '\\begin{chapterquote}' '\\begin{verse}\\it' \
+#			'\\end{chapterquote}' '\\rm\\end{verse}' \
+#			'\\begin{screen}' '\\begin{quote}' \
+#			'\\end{screen}' '\\end{quote}' \
+#			'\\begin{tscreen}' '\\begin{quote}\\tt' \
+#			'\\end{tscreen}' '\\rm\\end{quote}' \
+#			'\\begin{dispitems}' '\\begin{description}' \
+#			'\\end{dispitems}' '\\end{description}' \
+#			'\\key{\([^}]*\)}' '{\\tt \1}' \
+#			'\\ret\>' '{\\tt Return}' \
+#			'\\cleardoublepage' '\\newpage' \
+#			'\$3{1\\over 2}\$' '3.5' \
+#			'\\chapter\*{Short Contents}' ' ' \
+#			'\\@starttoc{soc}' ' ' \
+#			'\\onecolumn' ' ' \
+#			'\\twocolumn' ' ' \
+#			'\\hbox' ' ' \
+#			'\\vbox' ' ' \
+#			';'
+#exit
+#touch sag.aux
+latex2html -no_images sag
+
+#######  after processing html
+find sag -type f -name '*.html' \
+	-exec ./subst '{}' '\/usr\/local\/latex2html\/icons\/' '.\/' \
+			';'
+find sag -type f -name '*.html' \
+	-exec ./subst '{}' '\/usr\/work\/latex2html\/icons.gif\/' '.\/' \
+		      'CONTENT="sag"' 'CONTENT="linux,ukrainian,guide,sag"' \
+			';'
+cp /usr/local/latex2html/icons/* sag
+cp ../edscript .
+for FILE in sag/*.html; do
+    ed  - ${FILE} < edscript 
+done
+
+# cp /usr/local/latex2html/icons/* sag
+# cat ../sag.html > sag/sag.html
+# cp sag/sag.html sag/index.html
+# cp ../linux-logo.gif sag
+
+# {
+# cat <<EOF
+# <html><head><title>Short Contents</title></head><body>
+# <p><a href="long-contents.html">To detailed contents</a></p>
+# <h1>Short Contents</h1>
+# <ul>
+# EOF
+# grep '<LI>.*SECTION.*00000000000000000' sag/node1.html 
+# cat <<EOF
+# </ul></body></html>
+# EOF
+# } > sag/short-contents.html
+
+# mv sag/node1.html sag/long-contents.html
+# mv sag/short-contents.html sag/node1.html
