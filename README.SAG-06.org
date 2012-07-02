@@ -1,0 +1,79 @@
+This file should be called TODO, not README. It's just my
+electronic notebook for the SAG.
+
+To do for 1.0:
+
+	- explain a little bit of Unix history?
+	- do the index
+	- do appendices
+	- chapter quotes for all chapters
+	- make tables come out as HTML tables or <pre>, not gifs
+	- fix formatting and other problems
+	
+To do some other time:
+
+	- write chapters on printing, security, emergencies
+
+------------------------------------------------------------------------
+Other things:
+
+bring back "root hats and the feeling or power"
+
+UNIX -> Unix
+
+Include formatted stuff in the source package (at least formatted versions
+of .fig files).
+
+Do not meddle in the affairs of wizards, for they are subtle and quick 
+to anger.  Do not meddle in the affairs of dragons for you are crunchy 
+and taste good with ketchup.  Do not meddle in the affairs of cats, for 
+they are subtle and will piss on your computer.
+        anonymous
+
+sodomy non sapient (buggered if I know)
+
+usable vs useable: consistent
+
+different than -> different from ?
+
+how do shared libraries (ELF style) work?
+
+
+Quidquid latine dictum sit, altum viditur.
+(Whatever is said in Latin sounds profound.)
+
+Do not meddle in the affairs of system daemons, because they are
+many and your system is toast.
+
+If they don't know what you're doing, they don't know what
+you're doing wrong.
+	Sir Humphrey Appleby
+
+          The last eleven words of George Orwell's "1984".
+    'He had won the victory over himself. He loved Big Brother.'
+
+"Power corrupts.  Absolute power is kind of neat."
+				- John Lehman
+				  Secretary of the Navy, 1981-1987
+
+
+deleting users: find all their files.
+
+stuff to index:
+
+	command names
+		/bin/foo is main entry
+		foo, see /bin/foo
+		daemons, foo, see /bin/foo
+	filenames (full, if possible)
+	people
+	hardware
+		tape drives
+		floppy
+		hard disk
+		CDROM
+		monitor
+		keyboard
+		modem
+		printer
+
