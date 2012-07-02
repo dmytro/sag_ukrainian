@@ -1,0 +1,127 @@
+%
+% ``The Linux System Administrators' Guide''
+%   by Lars Wirzeniu <liw@iki.fi>
+%
+% This is the top level LaTeX2e source code file for the book.  You should
+% first create the files for the figures, then run this file through
+% LaTeX2e (note that no versions of LaTeX 2.09 will work).
+%
+% If you have any problems with formatting or content, send mail to the
+% author.
+%
+% If you like the book, please don't hesitate to send a post card.  Or
+% even just an e-mail.  This project doesn't progress very quickly, but
+% it _is_ fuelled by positive feedback and constructive criticism.
+%
+
+%
+% Pick one of the following (make sure all but one have % at the front
+% of the line)
+%
+
+% - single sided, letter paper (this should be the distribution default,
+%   but only because 200 million americans complain to me if I make A4
+%   the default paper size)
+%\documentclass[10pt,a4paper,twoside]{article}
+
+% - single sided, A4 paper
+\documentclass[9pt,a4paper,twoside]{report}
+
+% - double sided, letter paper
+% \documentclass{book}
+
+% - double sided, A4 paper
+%\documentclass[9pt,a4paper,twoside]{book}
+%
+% You shouldn't need to touch anything after this line.
+%
+\usepackage[T2A]{fontenc}
+\usepackage[koi8-u]{inputenc}
+\usepackage[english,ukrainian]{babel}
+%
+%\usepackage{linuxdoc}
+\usepackage{graphics}
+%\usepackage{html}
+%\usepackage[html,3.2]{tex4ht}
+\usepackage{makeidx}
+\usepackage{showidx}
+\usepackage{t1enc} % anything for a good quote...
+
+
+\makeindex
+
+%
+% Commands to mark various words.
+%
+\newcommand{\defin}[1]{\textbf{#1}}	% a definition of a word or concept
+\newcommand{\cmd}[1]{\texttt{#1}}
+%					% a shell command
+\newcommand{\fn}[1]{\texttt{#1}}
+%					% a filename
+\newcommand{\man}[1]{\emph{#1}}
+%					% a manual page
+%					% don't include (1) in arg!
+%\newcommand{\intnote}[1]{\footnote{\textbf{Прим╕тка перекладача:} {#1} \textbf{(-Д.К.)}}}
+					% footnote of translator
+% я пододавав до вс╕х цих ╕ндекси
+% DK
+%\newcommand{\defin}[1]{\textbf{#1}\index{#1}}	% a definition of a word or concept
+%\newcommand{\cmd}[1]{\texttt{#1}\index{#1}}
+					% a shell command
+%\newcommand{\fn}[1]{\texttt{#1}\index{#1}}
+					% a filename
+%\newcommand{\man}[1]{\emph{#1}\index{#1}}
+					% a manual page
+					% don't include (1) in arg!
+\newcommand{\intnote}[1]{\footnote{\textbf{Прим. перекл.:} {#1} \it{(ДК)}}}
+%\newcommand{\intnote}[1]{\footnote{\textbf{Прим╕тка перекладача:} {#1}\index{#1} \it{(ДК)}}}
+					% footnote of translator
+
+%
+% \begin{verse}\it...\rm\end{verse} is used at the beginning of a 
+% chapter to typeset a quote nicely.
+%
+\newenvironment{chapterquote}%
+	{\begin{raggedleft}\it}%
+	{\end{raggedleft}\vspace{2em}}
+
+%
+% \meta is used to mark comments inserted by the author.
+%
+\newcommand{\meta}{\small\textbf{META:\ }}
+
+%
+% We now begin the actual document.  Have a nice read.
+%
+\global\emergencystretch = .9\hsize
+\begin{document}
+
+\input{frontmatter}
+\input{contents}
+\input{translation/trans_notes}
+\input{intro/intro}
+\input{overview/overview}
+\input{walkabout/walkabout}
+\input{disks/disks}
+\input{mem/mem}
+\input{boothalt/boothalt}
+\input{init/init}
+\input{logins/logins}
+\input{useradmin/useradmin}
+\input{backups/backups}
+\input{time/time}
+% \input{security/security}
+% \input{printing/printing}
+% \input{emergencies/emergencies}
+\appendix
+\input{measure-holes/measure-holes}
+\input{glossary/glossary}
+
+\addcontentsline{toc}{chapter}{\protect\numberline{}{Bibliography}}
+\bibliographystyle{alpha}
+\bibliography{sag}
+
+\addcontentsline{toc}{chapter}{\protect\numberline{}{Index}}
+\printindex
+
+\end{document}
